@@ -1,0 +1,60 @@
+<html>
+  <Head>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ria's Real Estate</title>
+  </Head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="Contact.html">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Contact Ria's Real Estate</h1>
+      <p>Best Deals in Real Estate</p>
+    </header>
+    <main>
+      <form class="contact-form" onsubmit="return submitMessage(event);">
+        <label for="Email">Email</label>
+        <input type="text" name="Email" id="Email" required>
+        <label for="FullName">Full Name</label>
+        <input type="text" name="FullName" id="FullName" required>
+        <label for="FeedbackType">Feedback Type</label>
+        <select name="FeedbackType" id="FeedbackType">
+        <option value="Review">Review </option>
+        <option value="Complaint">Complaint </option>
+        <option value="Event">Book a visit</option>
+        </select>
+        <label for="Comment">Your Comments</label>
+        <textarea name="Comment" id="Comment" cols="20" rows="3" required>Please enter your comments here</textarea>
+        <button>Clear</button>
+        <input type="submit">
+      </form>
+    </main>
+      <script>
+        function submitMessage(event) {
+          event.preventdefault();
+          const Email = document.getElementById("Email").value;
+          const FullName = document.getElementById("FullName").value;
+          const FeedbackType = document.getElementById("FeedbackType").value;
+          const Comment = document.getElementById("Comment").value;
+          const messageObject = {
+            Email, FullName, FeedbackType, Comment
+          };
+
+          let currentMessages = [];
+          if (window.sessionStorage.getItem("messages")) {
+            currentMessages = JSON.parse(window.sessionStorage.getItem("messages"));
+          }
+          currentMessages.push(messageObject); window.sessionStorage.setItem("messages", JSON.stringify(currentMessages));
+        }
+      </script>
+    
+  </body>
+</html>

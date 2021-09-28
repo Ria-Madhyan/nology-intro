@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main > .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+main > .gallery > img {
+  height: 125px;
+  width: 125px;
+  border: lightgreen 10px solid;
+  padding: 10px;
+  box-shadow:rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;  
+  }
+  main > .gallery > img:hover {
+    box-shadow: rgba(22, 247, 22, 0.4) 5px 5px, rgba(22, 247, 22, 0.3) 10px 10px, rgba(22, 247, 22, 0.2) 15px 15px, rgba(22, 247, 22, 0.1) 20px 20px, rgba(22, 247, 22, 0.05) 25px 25px;  
+  }
+  

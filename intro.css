@@ -1,0 +1,13 @@
+h1 {color: blue; text-align: center; background-color: cyan
+}
+.content::after {
+    display: table;
+}
+.gallery {float: left; width: 40%;
+    padding: 5px;  
+}
+p {font-family: calibri; font-size: 30px;}
+img {
+  width: 240%;
+  height: 90%;
+}
